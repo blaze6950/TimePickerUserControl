@@ -1,0 +1,24 @@
+﻿<Window x:Class="TimePickerUserControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimePickerUserControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:DoubleToIntConverter x:Key="DoubleToIntConverter"></local:DoubleToIntConverter>
+    </Window.Resources>
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>-->
+        <local:TimePickerUC x:Name="TimePickerUc" ValueChanged="TimePickerUC_OnValueChanged" Hours="{Binding Text, ElementName=TextBox}" ></local:TimePickerUC>
+        <!--<Slider Name="Slider" Grid.Row="1" VerticalAlignment="Center" Minimum="0" Maximum="23" Value="{Binding ElementName=TimePickerUc, Path=Hours, Mode=TwoWay}"></Slider>-->
+        <!--<Slider Name="Slider" Grid.Row="1" Minimum="0" Maximum="23" VerticalAlignment="Center"></Slider>-->
+        <!--<TextBox Grid.Row="1" Name="TextBox" Margin="5" AcceptsReturn="True">10</TextBox>
+        <Button Grid.Row="2" Margin="8" Click="ButtonBase_OnClick">set hours</Button>-->
+    </Grid>
+</Window>
